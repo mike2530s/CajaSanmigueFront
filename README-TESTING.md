@@ -47,6 +47,9 @@ Siguiendo las instrucciones, cada componente/servicio tiene un archivo `.spec.ts
 - **Varios `it`**: Cada `it` valida un endpoint específico o un comportamiento (por ejemplo, "debería hacer un GET", "debería hacer un POST").
 - **Promesas modernas**: Se usó `firstValueFrom(service.metodo())` con `async/await` para esperar las respuestas de la API de forma limpia, reemplazando el callback anticuado `done()`.
 
+### ¿Por qué los archivos terminan en `.spec.ts`?
+En Angular y en el ecosistema general de TypeScript, la terminación **`.spec.ts`** significa "Specification" (Especificación). Esta es la convención universal para nombrar a los archivos de pruebas. Herramientas como Vitest buscan automáticamente en el proyecto cualquier archivo con este sufijo para ejecutarlo, separando así el código de tu aplicación del código de tus pruebas.
+
 Ejemplo de `cliente.service.spec.ts`:
 ```typescript
 describe('ClienteService (Pruebas de Integración con MSW)', () => {
